@@ -29,6 +29,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:phra/pm2-deploy-example.git',
       path : '/tmp',
+      fetch: 'full',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
@@ -37,6 +38,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:phra/pm2-deploy-example.git',
       path : '/tmp',
+      fetch: 'fast',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
